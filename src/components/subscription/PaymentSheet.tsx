@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X, Crown, Smartphone, Key, Check, Loader2 } from "lucide-react";
-import { Sheet } from "@/components/ui/Sheet";
+import { Sheet } from "@/components/ui/sheet";
 import { subscriptionService } from "@/services/subscriptionService";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";

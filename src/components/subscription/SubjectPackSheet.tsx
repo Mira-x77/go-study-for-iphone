@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Check, ChevronRight, Zap } from "lucide-react";
-import { Sheet } from "@/components/ui/Sheet";
+import { Sheet } from "@/components/ui/sheet";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface SubjectPackSheetProps {

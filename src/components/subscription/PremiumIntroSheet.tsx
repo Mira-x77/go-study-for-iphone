@@ -1,5 +1,5 @@
 import { X, Crown, ChevronRight } from "lucide-react";
-import { Sheet } from "@/components/ui/Sheet";
+import { Sheet } from "@/components/ui/sheet";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAppConfig } from "@/contexts/AppConfigContext";
 

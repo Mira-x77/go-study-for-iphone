@@ -20,9 +20,10 @@ export function PremiumCodeDialog({ open, onClose, onSuccess }: PremiumCodeDialo
   const [loading, setLoading] = useState(false);
 
   const handleCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-    if (value.length > 4 && value.length <= 8) value = value.slice(0, 4) + '-' + value.slice(4);
-    else if (value.length > 8) value = value.slice(0, 4) + '-' + value.slice(4, 8) + '-' + value.slice(8, 12);
+    // Treat spaces and hyphens as separators — strip all then re-insert hyphens
+    let value = e.target.value.toUpperCase().replace(/[\s-]/g, '').replace(/[^A-Z0-9]/g, '');
+    if (value.length > 8) value = value.slice(0, 4) + '-' + value.slice(4, 8) + '-' + value.slice(8, 12);
+    else if (value.length > 4) value = value.slice(0, 4) + '-' + value.slice(4);
     setCode(value);
   };
 

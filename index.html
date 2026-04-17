@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Go Study!</title>
+    <meta name="description" content="Go Study! - Your strategic exam planner" />
+    <meta name="author" content="Go Study!" />
+
+    <!-- ── PWA / Theme ──────────────────────────────────────────────────── -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- ── iOS PWA (Safari "Add to Home Screen") ────────────────────────── -->
+    <!-- Enables full-screen standalone mode on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Status bar style: default | black | black-translucent              -->
+    <!-- black-translucent bleeds content under the notch (use viewport-fit=cover) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Go Study!" />
+    <!-- Prevent iOS from auto-detecting phone numbers / addresses          -->
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+
+    <!-- ── Apple Touch Icons (iOS home screen icons) ─────────────────────── -->
+    <!-- iOS uses these, not the manifest icons                              -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57"  href="/icons/apple-touch-icon-57.png" />
+    <link rel="apple-touch-icon" sizes="60x60"  href="/icons/apple-touch-icon-60.png" />
+    <link rel="apple-touch-icon" sizes="72x72"  href="/icons/apple-touch-icon-72.png" />
+    <link rel="apple-touch-icon" sizes="76x76"  href="/icons/apple-touch-icon-76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
+
+    <!-- ── iOS Splash Screens ────────────────────────────────────────────── -->
+    <!-- iPhone 14 Pro Max (430×932 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1290x2796.png" />
+    <!-- iPhone 14 Pro (393×852 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1179x2556.png" />
+    <!-- iPhone 14 / 13 / 12 (390×844 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1170x2532.png" />
+    <!-- iPhone 14 Plus / 13 Pro Max / 12 Pro Max (428×926 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1284x2778.png" />
+    <!-- iPhone SE (375×667 @2x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+          href="/splash/splash-750x1334.png" />
+    <!-- iPhone XR / 11 (414×896 @2x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+          href="/splash/splash-828x1792.png" />
+    <!-- iPhone X / XS / 11 Pro (375×812 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1125x2436.png" />
+    <!-- iPhone XS Max / 11 Pro Max (414×896 @3x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+          href="/splash/splash-1242x2688.png" />
+    <!-- iPad (768×1024 @2x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+          href="/splash/splash-1536x2048.png" />
+    <!-- iPad Pro 11" (834×1194 @2x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+          href="/splash/splash-1668x2388.png" />
+    <!-- iPad Pro 12.9" (1024×1366 @2x) -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+          href="/splash/splash-2048x2732.png" />
+
+    <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+
+    <!-- ── Open Graph ────────────────────────────────────────────────────── -->
+    <meta property="og:title" content="Go Study!" />
+    <meta property="og:description" content="Go Study! - Your strategic exam planner" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- ── Twitter Card ───────────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

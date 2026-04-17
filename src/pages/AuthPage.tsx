@@ -42,7 +42,9 @@ export default function AuthPage() {
 
   const getRedirectUrl = () => {
     if (Capacitor.getPlatform() !== "web") return "com.scoretarget.app://auth/callback";
-    return `${window.location.origin}/auth/callback`;
+    // Always use the current origin so it works on Vercel, localhost, or any domain
+    const origin = window.location.origin;
+    return `${origin}/auth/callback`;
   };
 
   const handleOAuth = async (provider: "google" | "apple") => {
@@ -129,6 +131,8 @@ export default function AuthPage() {
           {oauthLoading === "google" ? t("signingIn") : t("continueWithGoogle")}
         </button>
 
+        {/* Apple Sign In — only available in the native app (requires Apple Developer setup for web) */}
+        {Capacitor.getPlatform() !== "web" && (
         <button
           onClick={() => handleOAuth("apple")}
           disabled={!!oauthLoading}
@@ -143,6 +147,7 @@ export default function AuthPage() {
           )}
           {oauthLoading === "apple" ? t("signingIn") : t("continueWithApple")}
         </button>
+        )}
 
         {error && (
           <p className="text-xs font-bold text-danger bg-danger/10 border-2 border-danger/30 rounded-xl px-4 py-3 text-center">{error}</p>
